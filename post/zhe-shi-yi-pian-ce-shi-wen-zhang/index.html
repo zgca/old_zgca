@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    Gridea
+    这是一篇测试文章 | Gridea
 </title>
 <link rel="shortcut icon" href="https://zgca.github.io/favicon.ico?v=1615899182949">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -19,6 +19,7 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+        
 </head>
 
 <body>
@@ -93,16 +94,96 @@
     });
 </script>
 
-            <div class="tags-container main-container">
-                <div class="tags-group">
-                    
-                        <a class="tags-tag i-tag
-                            i-tag-other_4" href="https://zgca.github.io/tag/GT1YxO_RJ/">
-                            Gridea
-                        </a>
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            这是一篇测试文章
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2021-03-16</time>
+                            
+                        </div>
                         
+                                <div class="post-content">
+                                    <h1 id="图床">图床</h1>
+<p>健身: No<br>
+創建日期: Mar 16, 2021 4:36 PM<br>
+回覆郵件: No<br>
+完成: No<br>
+撰寫: No<br>
+標簽: 作業<br>
+讀書: No</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/03/16/BIeC8N7hEUjSkVA.png" alt="https://i.loli.net/2021/03/16/BIeC8N7hEUjSkVA.png" loading="lazy"></figure>
+<p>添加图床文件就是这样</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/03/16/BIeC8N7hEUjSkVA.png" alt="https://i.loli.net/2021/03/16/BIeC8N7hEUjSkVA.png" loading="lazy"></figure>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://zgca.github.io/post/hello-gridea/">
+                                <h3 class="post-title">
+                                    Hello Gridea
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
                 </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E5%9B%BE%E5%BA%8A">图床</a></li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
             </div>
+
 
             <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
@@ -113,7 +194,15 @@
   hljs.initHighlightingOnLoad()
 </script>
 
+
     </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
 </body>
 
 </html>
